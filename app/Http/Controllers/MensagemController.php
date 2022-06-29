@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mensagem;
+use App\Models\Topico;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MensagemController extends Controller
 {
@@ -14,7 +16,8 @@ class MensagemController extends Controller
      */
     public function index()
     {
-        //
+        $mensagens = Mensagem::all();
+        return view("restrict\mensagem", compact('mensagens'));
     }
 
     /**
@@ -24,7 +27,8 @@ class MensagemController extends Controller
      */
     public function create()
     {
-        //
+        $topicos = Topico::all();
+        return view("restrict/mensagem/create",compact('topicos'));
     }
 
     /**
