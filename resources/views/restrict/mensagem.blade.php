@@ -22,14 +22,14 @@
             <td>{{$mensagem->titulo}}</td>
             <td>{{$mensagem->mensagem}}</td>
             <td>
-                @if($mensagem->topicos)
+                @if($mensagem->topico)
                 @foreach($mensagem->topicos as $topico)
                 <div>{{$topico->topico}}</div>
                 @endforeach
                 @endif
             </td>
             <td>
-                <a href="{{route('mensagem.edit,$mensagem->id)}}" class="button">
+                <a href="{{route('mensagem.edit',$mensagem->id)}}" class="button">
                     Editar
                 </a>
             </td>
@@ -40,6 +40,7 @@
                     <button type="submit" class="button">
                         Remover
                     </button>
+              </form>    
             </td>
         </tr>
         @endforeach

@@ -13,7 +13,7 @@
     @method('POST')
     <div>
         <label for="topico">Tópico</label>
-        <input type="text" name="topico" id="topico" value="{{old('topico)}}" required />
+        <input type="text" name="topico" id="topico" value="{{old('topico')}}" required />
     </div>
     <button type="submit" class="button">Salvar</button>
 </form>

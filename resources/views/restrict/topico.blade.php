@@ -15,6 +15,7 @@
     <tbody>
         @foreach($topicos as $topico)
         <tr>
+            <td>{{$topico->topico}}</td>
             <td>
                 <a href="{{route('topico.edit',$topico->id)}}" class="button">
                     Editar
